@@ -5,4 +5,4 @@ $(document).ready ->
   $('#js-form #submit').click ->
     $('#js-form #name-tag').html("Hello, my name is "+$('#js-form #name').val())
 
-  alert('Hello!')
+  console.log('Hello!')

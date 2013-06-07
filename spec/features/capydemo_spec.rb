@@ -41,8 +41,15 @@ feature 'Capybara demos' do
 
   end
 
-  scenario 'Javascript prints some stuff to console' do
+  scenario 'JavaScript opens an alert message', js: true do
     visit '/'
+    click_link 'Click me'
+    page.driver.alert_messages.first.should eq 'Hello Capybara!'
+  end
+
+  scenario 'Javascript prints some stuff to console', js: true do
+    visit '/'
+    page.driver.console_messages.first[:message].should eq "Hello!"
   end
 
   scenario 'Take a screenshot', js: true do
