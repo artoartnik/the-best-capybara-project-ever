@@ -29,6 +29,7 @@ group :test, :development do
   gem 'guard-pow'
 
   gem 'capybara'
+  gem 'capybara-webkit'
   gem 'poltergeist'
 end
 

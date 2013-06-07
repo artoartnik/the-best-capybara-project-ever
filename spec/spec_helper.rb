@@ -13,7 +13,7 @@ Spork.prefork do
     Capybara::Poltergeist::Driver.new(app, :inspector => true)
   end
 
-  Capybara.javascript_driver = :poltergeist_debug
+  Capybara.javascript_driver = :webkit
 
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.

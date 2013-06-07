@@ -23,6 +23,7 @@ feature 'Capybara demos' do
     visit '/'
     click_link 'Link to another page'
     page.should have_content 'subpage'
+    current_path.should eq subpage_path
 
   end
 
@@ -38,6 +39,10 @@ feature 'Capybara demos' do
       page.should have_content "Hello, my name is Martin"
     end
 
+  end
+
+  scenario 'Javascript prints some stuff to console' do
+    visit '/'
   end
 
   scenario 'Take a screenshot', js: true do
